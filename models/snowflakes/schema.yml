@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: sourcejoin # required
+    description: 'join two table'
+    database: DBFORDBT
+    schema: DBT_JUNEE26
+    tables: 
+      - name: CUSTOMERS
+      - name: ORDERS

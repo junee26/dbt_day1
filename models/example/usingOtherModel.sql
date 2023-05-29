@@ -1,0 +1,1 @@
+select count (id) as countdata from {{ ref('first_model1')}}
