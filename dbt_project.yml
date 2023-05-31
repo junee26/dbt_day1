@@ -36,6 +36,11 @@ models:
     # Applies to all files under models/example/
     example:
       materialized: view
+      schema: staging
 
 vars:
   data_variable: 1      
+
+
+on-run-start: "insert into DBFORDBT.DBT_JUNEE26.DBT_AUDITED(AUDIT_TYPE) values('audit start');"
+on-run-end: "insert into DBFORDBT.DBT_JUNEE26.DBT_AUDITED(AUDIT_TYPE) values ('audit end');"

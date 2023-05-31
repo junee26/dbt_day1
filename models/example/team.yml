@@ -1,0 +1,13 @@
+
+version: 2
+
+models:
+    - name: emp
+      columns:
+        - name: id
+        - name: name
+        - name: country
+          tests:
+            - is_nepal
+       
+

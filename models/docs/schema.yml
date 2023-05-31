@@ -1,0 +1,13 @@
+
+version: 2
+
+models:
+    - name: custom_model1
+      description: 'This is custom model'
+      columns:
+          - name: id
+            description: '{{ doc("custom_model_id1") }}'
+          - name: name
+            description: '{{ doc("custom_model_name1") }} '
+          - name: age
+            description: '{{ doc("custom_model_age1") }}'
