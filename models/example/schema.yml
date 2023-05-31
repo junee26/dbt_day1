@@ -1,5 +1,12 @@
 
 version: 2
+sources:
+    - name: legacy
+      database: DBFORDBT
+      schema: DBT_JUNEE26
+      tables:
+        - name: table1
+        - name: table2
 
 models:
     - name: my_first_dbt_model
@@ -12,10 +19,23 @@ models:
                 - not_null
 
     - name: my_second_dbt_model
-      description: "A starter dbt model"
+      description: '{{ doc("table_events") }}'
       columns:
           - name: id
             description: "The primary key for this table"
             tests:
                 - unique
                 - not_null
+
+    - name: custom_model
+      description: 'This is custom model'
+      columns:
+          - name: id
+            description: '{{ doc("custom_model_id") }}'
+          - name: name
+            description: '{{ doc("custom_model_name") }} '
+          - name: age
+            description: '{{ doc("custom_model_age") }}'
+
+    
+
