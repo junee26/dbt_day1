@@ -1,5 +1,12 @@
 
 version: 2
+sources:
+    - name: legacy
+      database: DBFORDBT
+      schema: DBT_JUNEE26
+      tables:
+        - name: table1
+        - name: table2
 
 models:
     - name: my_first_dbt_model
