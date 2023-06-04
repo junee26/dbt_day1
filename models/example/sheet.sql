@@ -1,0 +1,1 @@
+select count(*) as sheet_count from _AIRBYTE_RAW_JSSHEET1
